@@ -2,7 +2,7 @@
 
 A responsive personal portfolio for **Sakib Patwary**, built with React and TypeScript. It showcases professional experience, skills, services, and projects in a dark interface with red, blue, black, and white accents.
 
-**Live website:** [vivecodingportfolio.netlify.app](https://vivecodingportfolio.netlify.app/)
+**Live website:** [vibecoding-patwary.netlify.app](https://vibecoding-patwary.netlify.app/)
 
 ## Features
 
