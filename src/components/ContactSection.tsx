@@ -85,8 +85,8 @@ export const ContactSection: React.FC = () => {
                   <h3 className="text-lg font-display font-bold text-white">
                     Direct Contact Details
                   </h3>
-                  <span className="text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-[11px] font-mono text-blue-400 flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
                     Available for hire
                   </span>
                 </div>
@@ -114,21 +114,21 @@ export const ContactSection: React.FC = () => {
                       className="p-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                       title="Copy Email"
                     >
-                      {copiedEmail ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                      {copiedEmail ? <Check className="w-3.5 h-3.5 text-blue-400" /> : <Copy className="w-3.5 h-3.5" />}
                     </button>
                   </div>
 
                   {/* Phone */}
                   <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center justify-between group hover:border-white/15 transition-colors">
                     <div className="flex items-center gap-3 overflow-hidden">
-                      <div className="p-2.5 rounded-xl bg-purple-500/10 text-purple-400 shrink-0">
+                      <div className="p-2.5 rounded-xl bg-red-500/10 text-red-400 shrink-0">
                         <Phone className="w-4 h-4" />
                       </div>
                       <div className="min-w-0">
                         <div className="text-[10px] font-mono uppercase text-gray-400">Phone / WhatsApp</div>
                         <a
                           href={`tel:${PERSONAL_INFO.phone}`}
-                          className="text-xs sm:text-sm font-medium text-white truncate block hover:text-purple-400 transition-colors"
+                          className="text-xs sm:text-sm font-medium text-white truncate block hover:text-red-400 transition-colors"
                         >
                           {PERSONAL_INFO.phone}
                         </a>
@@ -140,13 +140,13 @@ export const ContactSection: React.FC = () => {
                       className="p-2 rounded-xl text-gray-400 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                       title="Copy Phone"
                     >
-                      {copiedPhone ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                      {copiedPhone ? <Check className="w-3.5 h-3.5 text-blue-400" /> : <Copy className="w-3.5 h-3.5" />}
                     </button>
                   </div>
 
                   {/* Location */}
                   <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center gap-3">
-                    <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 shrink-0">
+                    <div className="p-2.5 rounded-xl bg-blue-500/10 text-blue-400 shrink-0">
                       <MapPin className="w-4 h-4" />
                     </div>
                     <div>
@@ -157,7 +157,7 @@ export const ContactSection: React.FC = () => {
 
                   {/* Birthday */}
                   <div className="p-4 rounded-2xl bg-white/[0.02] border border-white/5 flex items-center gap-3">
-                    <div className="p-2.5 rounded-xl bg-amber-500/10 text-amber-400 shrink-0">
+                    <div className="p-2.5 rounded-xl bg-red-500/10 text-red-400 shrink-0">
                       <Calendar className="w-4 h-4" />
                     </div>
                     <div>
@@ -169,7 +169,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {/* Service Commitments */}
-              <div className="p-4 rounded-2xl bg-gradient-to-r from-blue-500/10 via-indigo-500/5 to-transparent border border-blue-500/20 text-xs text-gray-300 space-y-2 mt-4">
+              <div className="p-4 rounded-2xl bg-gradient-to-r from-blue-500/10 via-blue-500/5 to-transparent border border-blue-500/20 text-xs text-gray-300 space-y-2 mt-4">
                 <div className="flex items-center gap-2 text-white font-medium">
                   <Clock className="w-4 h-4 text-blue-400" />
                   <span>Rapid Response Time</span>
@@ -178,7 +178,7 @@ export const ContactSection: React.FC = () => {
                   Inquiries answered typically within 12–24 hours. Available for scheduled Zoom/Meet consultations and async reviews.
                 </p>
                 <div className="flex items-center gap-2 pt-1 text-[11px] text-gray-300">
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                  <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
                   <span>NDA & Privacy Respected</span>
                 </div>
               </div>
@@ -204,8 +204,8 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {status === 'success' && (
-                <div className="p-4 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-sm flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 shrink-0 text-emerald-400" />
+                <div className="p-4 rounded-2xl bg-blue-500/15 border border-blue-500/30 text-blue-300 text-sm flex items-center gap-3">
+                  <CheckCircle2 className="w-5 h-5 shrink-0 text-blue-400" />
                   <span>Your message sent successfully! Thank you for reaching out.</span>
                 </div>
               )}
@@ -297,7 +297,7 @@ export const ContactSection: React.FC = () => {
         <div className="p-4 sm:p-6 rounded-[32px] bg-white/[0.03] border border-white/10 backdrop-blur-xl shadow-2xl space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-2">
             <div className="flex items-center gap-3">
-              <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+              <div className="p-2.5 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
@@ -307,7 +307,7 @@ export const ContactSection: React.FC = () => {
             </div>
             <div className="flex items-center gap-3 text-xs font-mono text-gray-400">
               <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                <span className="w-2 h-2 rounded-full bg-blue-400 animate-ping" />
                 <span>Working with Clients Worldwide</span>
               </span>
             </div>
@@ -325,10 +325,8 @@ export const ContactSection: React.FC = () => {
               title="Dhaka Location Map - Sakib Patwary"
             />
             <div className="absolute bottom-4 left-4 px-4 py-2 rounded-2xl bg-black/85 backdrop-blur-md border border-white/20 text-xs font-mono text-white flex items-center gap-2 shadow-2xl">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse" />
               <span className="font-semibold">Dhaka, Bangladesh</span>
-              <span className="text-gray-400">|</span>
-              <span className="text-gray-300">Software Engineering Headquarters</span>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ export const TestimonialsSection: React.FC = () => {
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-mono text-emerald-400">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400">
             <Sparkles className="w-3.5 h-3.5" />
             <span>CLIENT & TEAM ENDORSEMENTS</span>
           </div>
@@ -37,7 +37,7 @@ export const TestimonialsSection: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                      <Star key={i} className="w-4 h-4 fill-red-400 text-red-400" />
                     ))}
                   </div>
                   <Quote className="w-6 h-6 text-white/20" />

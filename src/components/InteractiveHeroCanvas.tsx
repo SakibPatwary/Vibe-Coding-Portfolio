@@ -19,6 +19,7 @@ export const InteractiveHeroCanvas: React.FC = () => {
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     let animationFrameId: number;
     let width = (canvas.width = canvas.parentElement?.clientWidth || window.innerWidth);
@@ -55,9 +56,9 @@ export const InteractiveHeroCanvas: React.FC = () => {
 
     const colors = [
       '#3B82F6', // Blue
-      '#8B5CF6', // Purple
+      '#EF374A', // Red
       '#60A5FA', // Sky Blue
-      '#A855F7', // Violet
+      '#F87171', // Soft red
     ];
 
     let particles: Particle[] = [];
@@ -99,7 +100,7 @@ export const InteractiveHeroCanvas: React.FC = () => {
         const dxMouse = mouse.x - p1.x;
         const dyMouse = mouse.y - p1.y;
         const distMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
-        if (distMouse < mouse.radius) {
+        if (distMouse > 0 && distMouse < mouse.radius) {
           const force = (mouse.radius - distMouse) / mouse.radius;
           p1.x -= (dxMouse / distMouse) * force * 1.2;
           p1.y -= (dyMouse / distMouse) * force * 1.2;

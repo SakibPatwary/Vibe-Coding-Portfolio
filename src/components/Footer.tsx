@@ -54,7 +54,7 @@ export const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="p-2.5 rounded-2xl bg-white/5 hover:bg-pink-600/30 border border-white/10 text-gray-400 hover:text-pink-400 transition-colors"
+            className="p-2.5 rounded-2xl bg-white/5 hover:bg-red-600/30 border border-white/10 text-gray-400 hover:text-red-400 transition-colors"
           >
             <Instagram className="w-4 h-4" />
           </a>

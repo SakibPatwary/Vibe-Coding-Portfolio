@@ -5,16 +5,16 @@ import { Code, Palette, Smartphone, Layers, Sparkles, CheckCircle2, ArrowRight }
 
 const serviceIcons: Record<string, React.ReactNode> = {
   Code: <Code className="w-6 h-6 text-blue-400" />,
-  Palette: <Palette className="w-6 h-6 text-purple-400" />,
-  Smartphone: <Smartphone className="w-6 h-6 text-emerald-400" />,
-  Layers: <Layers className="w-6 h-6 text-amber-400" />
+  Palette: <Palette className="w-6 h-6 text-red-400" />,
+  Smartphone: <Smartphone className="w-6 h-6 text-blue-400" />,
+  Layers: <Layers className="w-6 h-6 text-red-400" />
 };
 
 const serviceGradients: Record<string, string> = {
   Code: 'from-blue-500/20 via-blue-500/5 to-transparent border-blue-500/30 hover:border-blue-500/60',
-  Palette: 'from-purple-500/20 via-purple-500/5 to-transparent border-purple-500/30 hover:border-purple-500/60',
-  Smartphone: 'from-emerald-500/20 via-emerald-500/5 to-transparent border-emerald-500/30 hover:border-emerald-500/60',
-  Layers: 'from-amber-500/20 via-amber-500/5 to-transparent border-amber-500/30 hover:border-amber-500/60'
+  Palette: 'from-red-500/20 via-red-500/5 to-transparent border-red-500/30 hover:border-red-500/60',
+  Smartphone: 'from-blue-500/20 via-blue-500/5 to-transparent border-blue-500/30 hover:border-blue-500/60',
+  Layers: 'from-red-500/20 via-red-500/5 to-transparent border-red-500/30 hover:border-red-500/60'
 };
 
 export const AboutSection: React.FC = () => {
@@ -60,15 +60,15 @@ export const AboutSection: React.FC = () => {
                   <span>Functional & User-Friendly</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-purple-400 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-red-400 shrink-0" />
                   <span>Attractive & Eye-Catching</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0" />
                   <span>Personal Touch & Clear Identity</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-red-400 shrink-0" />
                   <span>Client & Company Proven</span>
                 </div>
               </div>

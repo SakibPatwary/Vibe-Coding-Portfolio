@@ -15,7 +15,7 @@ export const FAQSection: React.FC = () => {
       <div className="max-w-4xl mx-auto space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-xs font-mono text-amber-400">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-xs font-mono text-red-400">
             <HelpCircle className="w-3.5 h-3.5" />
             <span>COMMON INQUIRIES</span>
           </div>
@@ -78,7 +78,7 @@ export const FAQSection: React.FC = () => {
         </div>
 
         {/* Callout box */}
-        <div className="p-6 rounded-[28px] bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-transparent border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="p-6 rounded-[28px] bg-gradient-to-r from-blue-500/10 via-red-500/10 to-transparent border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="space-y-1">
             <h4 className="text-base font-display font-bold text-white">Have a specific or custom question?</h4>
             <p className="text-xs sm:text-sm text-gray-400">

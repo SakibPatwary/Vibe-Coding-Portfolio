@@ -75,7 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenDeployGuide }) => {
               {PERSONAL_INFO.name}
             </span>
             <span className="text-[11px] font-mono text-gray-400 -mt-1 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
               {PERSONAL_INFO.title}
             </span>
           </div>

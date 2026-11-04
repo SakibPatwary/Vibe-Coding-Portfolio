@@ -1,5 +1,64 @@
 @import "tailwindcss";
 
+html { color-scheme: dark; scroll-behavior: smooth; scroll-padding-top: 100px; }
+body { margin: 0; }
+:focus-visible { outline: 2px solid #719bff; outline-offset: 5px; }
+
+/* Quiet, luminous surfaces over a charcoal canvas. */
+main > section { scroll-margin-top: 90px; }
+main > section::after {
+  content: ''; position: absolute; bottom: 0; left: 15%; right: 15%; height: 1px;
+  background: linear-gradient(90deg, transparent, #477bff26, #ef374a1a, transparent);
+  pointer-events: none;
+}
+main .border { transition: border-color .35s, box-shadow .35s, background-color .35s, transform .35s; }
+main .border:hover {
+  border-color: rgb(112 150 255 / .28);
+  box-shadow: 0 12px 48px #0004, inset 0 1px 0 #ffffff09;
+  background-image: radial-gradient(420px circle at var(--mouse-x, 50%) var(--mouse-y, 0%), #477bff0c, transparent 75%);
+}
+#home > .relative > .border {
+  background-color: #0b0d13d9;
+  border-color: #ffffff14;
+  box-shadow: 0 30px 100px #0008, inset 0 1px 0 #ffffff0a;
+}
+#home h1 { text-shadow: 0 0 50px #4b7aff22; }
+#home h2 { background-size: 200% auto; animation: headline-light 12s ease-in-out infinite; }
+#hero-view-portfolio-btn {
+  background: linear-gradient(120deg, #3267df, #477bf5 55%, #2857bf);
+  color: #fff; box-shadow: 0 6px 28px #3067e42b;
+  border: 1px solid #83a7ff55;
+}
+#hero-view-portfolio-btn:hover { box-shadow: 0 8px 38px #3067e450; }
+#hero-contact-btn:hover { border-color: #ef374a66; box-shadow: 0 8px 30px #ef374a14; }
+#main-navbar nav { background: #0b0d16bf; border-color: #ffffff12; }
+.pointer-smoke { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 60; pointer-events: none; }
+.reading-progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #ef374a, #487dff 65%, #c8d7ff); transform-origin: left; z-index: 80; }
+.reveal-section { opacity: 0; translate: 0 24px; transition: opacity .85s ease, translate .85s cubic-bezier(.16,1,.3,1); }
+.reveal-section.is-visible { opacity: 1; translate: 0 0; }
+.site-loader { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; gap: 28px; align-items: center; justify-content: center; background: radial-gradient(ellipse at 50% 45%, #11182b, #060709 55%); }
+.loader-emblem { position: relative; width: 100px; height: 100px; display: grid; place-items: center; }
+.loader-emblem b { font-family: 'JetBrains Mono', monospace; color: #e0e8ff; font-size: 26px; font-weight: 400; }
+.loader-emblem > span { position: absolute; inset: 0; border: 1px solid #ffffff0c; border-top-color: #4d81ff; border-bottom-color: #ef374a; border-radius: 50%; animation: orbit 1.8s linear infinite; box-shadow: 0 0 30px #477bff0d; }
+.loader-emblem > span:nth-child(2) { inset: 10px; animation-direction: reverse; animation-duration: 2.8s; border-top-color: #ef374a88; border-bottom-color: transparent; }
+.loader-caption { font: 10px 'JetBrains Mono', monospace; letter-spacing: .3em; color: #a3aec5; }
+.loader-track { height: 2px; width: 160px; background: #ffffff0a; overflow: hidden; }
+.loader-track span { display: block; width: 45%; height: 100%; background: linear-gradient(90deg, #ef374a, #477bff); animation: loading-track 1s ease-in-out infinite alternate; }
+@keyframes orbit { to { transform: rotate(360deg); } }
+@keyframes loading-track { from { transform: translateX(-100%); } to { transform: translateX(225%); } }
+@keyframes headline-light { 0%, 100% { background-position: 0% center; } 50% { background-position: 100% center; } }
+@media (max-width: 1100px) and (min-width: 768px) {
+  #main-navbar nav { gap: 0; padding-inline: 4px; }
+  #main-navbar nav a { padding-inline: 7px; font-size: 10px; }
+  #main-navbar > div { gap: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .reveal-section { opacity: 1; translate: none; }
+  .pointer-smoke { display: none; }
+}
+
 @layer base {
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
